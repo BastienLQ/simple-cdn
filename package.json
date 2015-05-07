@@ -1,0 +1,23 @@
+{
+  "name": "simple-cdn",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Simple app to receive and store files.",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "main": "app.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/BastienLQ/simple-cdn.git"
+  },
+  "author": "Bastien Le Querrec",
+  "license": "AGPL-3.0",
+  "engines": {
+    "node": "0.12.x"
+  },
+  "dependencies": {
+    "express": "^4.12.3",
+    "formidable": "^1.0.17"
+  }
+}
