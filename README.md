@@ -22,6 +22,17 @@ PORT=5000 KEY="something-very-strong" PUBLIC_DIR="files/" ROOT_URI="http://local
 
 You need Node.js and npm.
 
+## Docker
+
+To run this app into a Docker container, build the image and run it:
+
+```
+docker build -t "simple-cdn:latest" .
+docker run --restart=always -d --publish 127.0.0.1:8080:80 --env KEY="something-very-strong" simple-cdn:latest
+```
+
+Then, visit http://localhost:8080/. Files stored in the container are located at `/opt/app/files`.
+
 ## License
 
 Licensed under the GNU Affero General Public License Version 3 (or later); you may not use this work except in compliance with the License.
