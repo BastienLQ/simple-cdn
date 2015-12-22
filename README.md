@@ -28,7 +28,7 @@ To run this app into a Docker container, build the image and run it:
 
 ```
 docker build -t "simple-cdn:latest" .
-docker run --restart=always -d --publish 127.0.0.1:8080:80 --env KEY="something-very-strong" simple-cdn:latest
+docker run --restart=always -d --publish 127.0.0.1:8080:80 --env KEY="something-very-strong" --env ROOT_URI="http://localhost:8080/" simple-cdn:latest
 ```
 
 Then, visit http://localhost:8080/. Files stored in the container are located at `/opt/app/files`.
